@@ -28,6 +28,7 @@ public class SeqList<T> implements ISeqList<T> {
 		return t;
 	}
 
+	//时间复杂度是O(n)，一般我们所说的时间复杂度是指最坏的时间复杂度
 	@Override
 	public boolean insertElem(int i, T t) {
 		if (length == MAXSIZE) {
@@ -35,7 +36,7 @@ public class SeqList<T> implements ISeqList<T> {
 			return false;
 		}
 
-		if (i < length || i > MAXSIZE) {
+		if (i < 0 || i > MAXSIZE) {
 			System.out.println("插入的位置不在范围内");
 			return false;
 		}
